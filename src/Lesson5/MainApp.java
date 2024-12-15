@@ -8,16 +8,16 @@ public class MainApp {
         Student vlad = new Student("Vlad", "Islove");
 
 
-        System.out.println(glen.fullName());
-        System.out.println(serega.fullName());
-        System.out.println(vlad.fullName());
+        System.out.println(glen.getfullName());
+        System.out.println(serega.getfullName());
+        System.out.println(vlad.getfullName());
 
-       serega.attends();
-       glen.attends();
-       vlad.attends();
+       serega.printLessonsCount();
+       glen.printLessonsCount();
+       vlad.printLessonsCount();
 
        vlad.numberOfVisits = 4;
-       vlad.attends();
+       vlad.printLessonsCount();
 
     }
 }

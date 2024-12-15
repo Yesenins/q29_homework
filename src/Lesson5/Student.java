@@ -24,11 +24,11 @@ public class Student {
         this.numberOfVisits = numberOfVisits;
     }
 
-    public String fullName(){
+    public String getfullName(){
         return name + " " + surname;
     }
 
-    public void attends(){
+    public void printLessonsCount(){
         System.out.printf("%s attends %d classes\n", surname, numberOfVisits);
     }
 
