@@ -20,7 +20,7 @@ public class ClientServiceControlImpl implements ClientServiceControl {
     public void controlService(Order order) {
         clientsOrder.getOrder(order);
         orderStatus.sendStatusReport(order);
-
+        dataService.save(order);
         if(order.isSelfDelivery()){
             orderDelivery.takeWindowOrder(order);
         }else{
