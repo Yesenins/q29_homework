@@ -8,6 +8,6 @@ public class OnlineClientsOrderImpl implements ClientsOrder {
     public void getOrder(Order order) {
         order.setEmail("serega@gmail.com");
         order.setPhoneNumber("+375256748374");
-        System.out.println("Payment check will be sent to the post office " + order.getEmail());
+        System.out.println("Payment check will be sent to the email: " + order.getEmail());
     }
 }

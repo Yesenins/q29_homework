@@ -9,7 +9,7 @@ public class MainApp {
     public static void main(String[] args) {
         Order order = new Order("Serega",
                 new Menu[]{Menu.CHEESEBURGER,Menu.FRIES, Menu.COCA_COLA},
-                true);
+                false);
 
 
         ClientServiceControl serviceControl = new ClientServiceControlImpl(
