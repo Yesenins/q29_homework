@@ -6,12 +6,10 @@ public class Order {
     private String email;
     private String deliveryAddress;
     private Menu[] menu;
-    private boolean selfDelivery;
 
-    public Order(String name,Menu[] menu, boolean selfDelivery){
+    public Order(String name,Menu[] menu){
         this.name = name;
         this.menu = menu;
-        this.selfDelivery = selfDelivery;
     }
 
     public String getName() {
@@ -24,10 +22,6 @@ public class Order {
 
     public Menu[] getMenu() {
         return menu;
-    }
-
-    public boolean isSelfDelivery() {
-        return selfDelivery;
     }
 
     public void setDeliveryAddress(String deliveryAddress) {

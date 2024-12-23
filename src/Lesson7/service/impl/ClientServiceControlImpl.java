@@ -21,11 +21,7 @@ public class ClientServiceControlImpl implements ClientServiceControl {
         clientsOrder.getOrder(order);
         orderStatus.sendStatusReport(order);
         dataService.save(order);
-        if(order.isSelfDelivery()){
-            orderDelivery.takeWindowOrder(order);
-        }else{
-            orderDelivery.takeOrder(order);
-        }
+        orderDelivery.takeOrder(order);
 
     }
 }

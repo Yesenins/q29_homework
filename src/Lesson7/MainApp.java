@@ -8,15 +8,14 @@ import Lesson7.service.impl.*;
 public class MainApp {
     public static void main(String[] args) {
         Order order = new Order("Serega",
-                new Menu[]{Menu.CHEESEBURGER,Menu.FRIES, Menu.COCA_COLA},
-                false);
+                new Menu[]{Menu.CHEESEBURGER,Menu.FRIES, Menu.COCA_COLA});
 
 
         ClientServiceControl serviceControl = new ClientServiceControlImpl(
                 new OnlineClientsOrderImpl(),
                 new OrderDataServiceIml(),
                 new ClientOrderStatusImpl(),
-                new ClientOrderDeliveryImpl()
+                new OrderDeliveryToClientHomeImpl()
         );
         serviceControl.controlService(order);
     }
