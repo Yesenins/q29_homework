@@ -3,13 +3,13 @@ package Lesson7.service.impl;
 import Lesson7.domain.Order;
 import Lesson7.service.*;
 
-public class ClientServiceControlImpl implements ClientServiceControl {
+public class ServiceControlImpl implements ServiceControl {
     private ClientsOrder clientsOrder;
     private OrderDataService dataService;
-    private ClientOrderStatus orderStatus;
-    private ClientOrderDelivery orderDelivery;
+    private OrderStatus orderStatus;
+    private OrderDelivery orderDelivery;
 
-    public ClientServiceControlImpl(ClientsOrder clientsOrder, OrderDataService dataService, ClientOrderStatus orderStatus, ClientOrderDelivery orderDelivery) {
+    public ServiceControlImpl(ClientsOrder clientsOrder, OrderDataService dataService, OrderStatus orderStatus, OrderDelivery orderDelivery) {
         this.clientsOrder = clientsOrder;
         this.dataService = dataService;
         this.orderStatus = orderStatus;

@@ -1,7 +1,7 @@
 package Lesson7.service.impl;
 
-import Lesson7.service.ClientOrderDelivery;
+import Lesson7.service.OrderDelivery;
 
-public class OrderDeliveryFromWindow implements ClientOrderDelivery {
+public class OrderDeliveryFromWindow implements OrderDelivery {
 
 }

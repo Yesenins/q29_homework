@@ -2,7 +2,7 @@ package Lesson7;
 
 import Lesson7.domain.Order;
 import Lesson7.domain.Menu;
-import Lesson7.service.ClientServiceControl;
+import Lesson7.service.ServiceControl;
 import Lesson7.service.impl.*;
 
 public class MainApp {
@@ -11,10 +11,10 @@ public class MainApp {
                 new Menu[]{Menu.CHEESEBURGER,Menu.FRIES, Menu.COCA_COLA});
 
 
-        ClientServiceControl serviceControl = new ClientServiceControlImpl(
-                new OnlineClientsOrderImpl(),
+        ServiceControl serviceControl = new ServiceControlImpl(
+                new OnlineOrderImpl(),
                 new OrderDataServiceIml(),
-                new ClientOrderStatusImpl(),
+                new OrderStatusImpl(),
                 new OrderDeliveryToClientHomeImpl()
         );
         serviceControl.controlService(order);

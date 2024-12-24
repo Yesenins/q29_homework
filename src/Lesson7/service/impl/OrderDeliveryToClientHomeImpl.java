@@ -1,9 +1,9 @@
 package Lesson7.service.impl;
 
 import Lesson7.domain.Order;
-import Lesson7.service.ClientOrderDelivery;
+import Lesson7.service.OrderDelivery;
 
-public class OrderDeliveryToClientHomeImpl implements ClientOrderDelivery {
+public class OrderDeliveryToClientHomeImpl implements OrderDelivery {
     @Override
     public void takeOrder(Order order) {
         order.setDeliveryAddress("13 Nadezhdinskaya Street, apartment 4");

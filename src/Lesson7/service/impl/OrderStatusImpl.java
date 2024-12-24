@@ -1,11 +1,11 @@
 package Lesson7.service.impl;
 
 import Lesson7.domain.Order;
-import Lesson7.service.ClientOrderStatus;
+import Lesson7.service.OrderStatus;
 
 import java.util.Arrays;
 
-public class ClientOrderStatusImpl implements ClientOrderStatus {
+public class OrderStatusImpl implements OrderStatus {
     @Override
     public void sendStatusReport(Order order) {
         int number = (int)(Math.random() * 120) + 1;
