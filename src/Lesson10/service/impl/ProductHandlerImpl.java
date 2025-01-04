@@ -34,11 +34,10 @@ public class ProductHandlerImpl implements ProductHandler {
         boolean containsResult = list.contains(poco);
         System.out.println(containsResult);
 
-        for(int i = 0; i < 2; i++){
-            System.out.println("[Name: " + list.get(i).getName()+ ", Cost: " + list.get(i).getCost()+", Amount: "+list.get(i).getAmount()+ " ]");
-        }
+        System.out.println(list.subList(0,3));
 
         List<Product> reverseProduct = list.reversed();
+        System.out.println(reverseProduct);
 
     }
 }

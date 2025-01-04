@@ -23,4 +23,8 @@ public class Product {
     public Integer getAmount() {
         return amount;
     }
+
+    public String toString(){
+        return "(Name: " + name + ", Cost: " + cost + ", Amount: "+ amount + ")";
+    }
 }
