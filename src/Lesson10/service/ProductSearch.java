@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProductSearch {
 
-    void searchByName(List<Product> list, String name);
+    String searchByName(List<Product> list, String name);
 
-    void searchByCost(List<Product> list, int cost);
+    List<Product> searchByCost(List<Product> list, int cost);
 
     int getQuantityOfAllProducts(List<Product> list);
 

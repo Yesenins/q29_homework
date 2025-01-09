@@ -17,9 +17,11 @@ public class ProductHandlerImpl implements ProductHandler {
     @Override
     public void runSearch(List<Product> list) {
 
-        productSearch.searchByName(list, "samsung");
+        String searchItem = productSearch.searchByName(list, "samsung");
+        System.out.println(searchItem);
 
-        productSearch.searchByCost(list,70);
+        List<Product> searchItemByCost =  productSearch.searchByCost(list,70);
+        System.out.println(searchItemByCost);
 
         int quantityOfAllProducts = productSearch.getQuantityOfAllProducts(list);
         System.out.println("Quantity of all goods: " + quantityOfAllProducts);

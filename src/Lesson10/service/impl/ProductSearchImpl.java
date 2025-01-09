@@ -3,29 +3,31 @@ package Lesson10.service.impl;
 import Lesson10.domain.Product;
 import Lesson10.service.ProductSearch;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductSearchImpl implements ProductSearch {
 
     @Override
-    public void searchByName(List<Product> list, String name) {
+    public String searchByName(List<Product> list, String name) {
         for(Product el : list){
             if(el.getName().equalsIgnoreCase(name)){
-                System.out.println("[Name: " + el.getName()+ ", Cost: " + el.getCost()+", Amount: "+ el.getAmount()+ " ]");
+               return  "[Name: " + el.getName()+ ", Cost: " + el.getCost()+", Amount: "+ el.getAmount()+ "]";
             }
         }
-        System.out.println();
+        return "No such item";
     }
 
     @Override
-    public void searchByCost(List<Product> list, int cost) {
+    public List<Product> searchByCost(List<Product> list, int cost) {
         System.out.println("Goods with a value higher than "+ cost + "$: ");
+        List<Product> goods = new ArrayList<>();
         for(Product el : list){
             if(el.getCost() > cost){
-                System.out.println("[Name: " + el.getName()+ ", Cost: " + el.getCost()+", Amount: "+ el.getAmount()+ " ]");
+                goods.add(el);
             }
         }
-        System.out.println();
+        return goods;
     }
 
     @Override
