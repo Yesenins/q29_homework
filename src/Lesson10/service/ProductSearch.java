@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductSearch {
 
-    String searchByName(List<Product> list, String name);
+    Product searchByName(List<Product> list, String name);
 
     List<Product> searchByCost(List<Product> list, int cost);
 
