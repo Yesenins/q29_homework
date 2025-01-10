@@ -17,7 +17,7 @@ public class ProductHandlerImpl implements ProductHandler {
     @Override
     public void runSearch(List<Product> list) {
 
-        String searchItem = productSearch.searchByName(list, "samsung");
+        Product searchItem = productSearch.searchByName(list, "samsung");
         System.out.println(searchItem);
 
         List<Product> searchItemByCost =  productSearch.searchByCost(list,70);

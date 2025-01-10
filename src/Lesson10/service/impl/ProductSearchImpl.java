@@ -9,13 +9,13 @@ import java.util.List;
 public class ProductSearchImpl implements ProductSearch {
 
     @Override
-    public String searchByName(List<Product> list, String name) {
+    public Product searchByName(List<Product> list, String name) {
         for(Product el : list){
             if(el.getName().equalsIgnoreCase(name)){
-               return  "[Name: " + el.getName()+ ", Cost: " + el.getCost()+", Amount: "+ el.getAmount()+ "]";
+               return  el;
             }
         }
-        return "No such item";
+        return null;
     }
 
     @Override
